@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Studpoint</title>
+  <meta name="description" content="Studpoint – diákélet-infók, kedvezmények és útmutatók a kolozsvári egyetemistáknak.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;600;700&family=Zilla+Slab:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <div class="top-row">
+        <span class="top-spacer"></span>
+        <a href="#/" class="logo" id="logo" aria-label="Studpoint"><span class="logo-a">Stud</span><span class="logo-b">.point</span></a>
+        <div class="lang" role="group" aria-label="Language / Nyelv / Limbă">
+          <button type="button" data-lang="hu" class="active">HU</button>
+          <button type="button" data-lang="ro">RO</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+      </div>
+
+      <div class="intro-row">
+        <div class="intro">
+          <h1 id="heroTitle"></h1>
+          <p id="heroText"></p>
+        </div>
+        <label class="search-box">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>
+          <input type="search" id="search" autocomplete="off" aria-label="Search">
+        </label>
+      </div>
+    </div>
+
+    <nav class="catbar" aria-label="Categories">
+      <div class="wrap">
+        <div id="categories" class="cats"></div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+
+    <section id="listView">
+      <div id="subbar" class="subbar" hidden>
+        <div id="subcats" class="subs"></div>
+      </div>
+
+      <div class="list-head">
+        <p id="resultInfo" class="result-info"></p>
+        <button type="button" id="filterBtn" class="filter-btn" aria-expanded="false" aria-controls="filterPanel">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 7h11M18 7h3M3 17h3M10 17h11"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></svg>
+          <span id="filterLabel"></span>
+          <span id="filterCount" class="fcount" hidden></span>
+        </button>
+      </div>
+
+      <div id="filterPanel" class="filter-panel" hidden></div>
+      <div id="items" class="items"></div>
+    </section>
+
+    <section id="detailView" hidden></section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p id="footerText"></p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
